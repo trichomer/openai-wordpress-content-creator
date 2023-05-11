@@ -29,5 +29,5 @@ Simple script using OpenAI and WordPress APIs to generate content and pages.
 6. Place Access Code in .env WORDPRESS_ACCESS_CODE
 7. Run `node req_access_token` to generate WordPress Access Token
 8. Place Access Token in .env WORDPRESS_ACCESS_TOKEN (may need to wrap in quotes)
-9. Adjust index.js prompt and title as you see fit
+9. Adjust index.js `prompt` and `title` as you see fit
 10. Run `node index`
