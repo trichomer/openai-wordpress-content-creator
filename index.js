@@ -6,7 +6,7 @@ const wordpressDomain = process.env.WORDPRESS_DOMAIN;
 
 async function getGpt3Completion(prompt) {
   const response = await axios.post(
-    'https://api.openai.com/v1/engines/text-davinci-003/completions',
+    'https://api.openai.com/v1/engines/gpt-3.5-turbo-instruct/completions',
     {
       prompt,
       max_tokens: 400,
@@ -21,7 +21,8 @@ async function getGpt3Completion(prompt) {
       },
     }
   );
-
+  
+  console.log(response.data.choices[0].text.trim())
   return response.data.choices[0].text.trim();
 };
 
